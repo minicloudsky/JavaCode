@@ -18,7 +18,9 @@
         if ("admin".equals(username)&&"1234".equals(pwd)) {
             session.setAttribute("CurrentUser", username);
             response.sendRedirect("index.jsp");
-        } else {
+        }
+        else
+        {
             out.println("<script>alert('用户名或密码不正确');window.location.href('index.jsp)</script>");
         }
     }
@@ -32,7 +34,7 @@
         <td><a href="edit.jsp">编辑个人资料</a></td>
     </tr>
     <tr>
-        <td><a href="logout.jsp">退出登录</a> </td>
+        <td><a href="logout.jsp" >退出登录</a> </td>
     </tr>
 </table>
 <%
@@ -46,7 +48,7 @@
     </tr>
     <tr>
         <td>密码</td>
-        <td><input name="pwd" type="text" size="12"></td>
+        <td><input name="pwd" type= "text" size="12"></td>
     </tr>
     <tr>
         <td colspan="2">
