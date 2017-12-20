@@ -1,12 +1,11 @@
 package com.ch6;
+import com.ch6.model.StudentInfo;
 import com.sun.org.apache.regexp.internal.RE;
-
 import java.sql.*;
 public class Conn {
     Connection conn = null;
     Statement stmt = null;
     ResultSet rs = null;
-
     /*加载驱动程序*/
     public Conn() {
         try {
@@ -15,12 +14,11 @@ public class Conn {
             System.err.println(e.getMessage());
         }
     }
-
     /*执行查询操作*/
     public ResultSet executeQuery(String sql) {
         try {
             conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/testDB?useUnicode=true&characterEncoding=UTF-8",
+                    "jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=UTF-8",
                     "root", "root");
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
@@ -29,12 +27,11 @@ public class Conn {
         }
         return rs;
     }
-
     public int executeUpdate(String sql) {
         int result = 0;
         try {
             conn = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/testDB?useUnicode=true&characterEncoding=UTF-8",
+                    "jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=UTF-8",
                     "root", "root");
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
@@ -44,7 +41,6 @@ public class Conn {
         }
         return result;
     }
-
     /*关闭数据库连接*/
     public void close(){
         try {
