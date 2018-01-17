@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="demo1" extends = "struts-default" namespace = "/">
+		<action name="user_*" class = "userAction" method = "{1}">
+			<result name = "index">/index.jsp</result>
+			<result name = "login">/login.jsp</result>
+			<result name = "out">/login.jsp</result>
+		</action>
+		<action name="customer_*" class = "customerAction" method = "{1}">
+			<result name = "toAddPage">/jsp/customer/add.jsp</result>
+			<result name = "add" type = "redirectAction">customer_list</result>
+			<result name = "list">/jsp/customer/list.jsp</result>
+			<result name = "delete" type = "redirectAction">customer_list</result>
+			<result name = "find">/jsp/customer/edit.jsp</result>
+			<result name = "edit" type = "redirectAction">customer_list</result>
+			<result name = "listPage">/jsp/customer/list.jsp</result>
+			<result name = "toSelectPage">/jsp/select/customer.jsp</result>
+			<result name = "select">jsp/customer/list.jsp</result>
+		</action>
+		<action name="linkMan_*" class = "linkManAction" method = "{1}">
+			<result name = "toAddPage">/jsp/linkman/add.jsp</result>
+			<result name = "add" type = "redirectAction">linkMan_list</result>
+			<result name = "list">/jsp/linkman/list.jsp</result>
+			<result name = "toUpdatePage">/jsp/linkman/edit.jsp</result>
+			<result name = "update" type = "redirectAction">linkMan_list</result>
+			<result name = "toSelectPage">/jsp/select/linkMan.jsp</result>
+			<result name = "select">/jsp/linkman/list.jsp</result>
+		</action>
+		<action name="visit_*" class = "visitAction" method = "{1}">
+			<result name = "toAddPage">/jsp/visit/add.jsp</result>
+			<result name = "add">/jsp/success.jsp</result>
+			<result name = "list">/jsp/visit/list.jsp</result>
+			<result name = "toUpdatePage">/jsp/visit/edit.jsp</result>
+			<result name = "update" type = "redirectAction">visit_list</result>
+		</action>
+	</package>
+</struts>

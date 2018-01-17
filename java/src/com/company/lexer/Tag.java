@@ -1,4 +1,7 @@
 package com.company.lexer;
+/***
+ * 类 Tag 定义了各个词法单元对应的常量
+ */
 
 public class Tag {
     public final static int

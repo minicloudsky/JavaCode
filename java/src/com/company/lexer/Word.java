@@ -1,5 +1,7 @@
 package com.company.lexer;
-
+/**
+ * 类 Word 继承 Token, 增加了一个字段 lexeme, 用于保存关键字和标识符的词素。
+ * */
 public class Word extends Token{
     public String lexeme="";
 

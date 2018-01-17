@@ -5,6 +5,38 @@ import com.company.lexer.*;
 import com.company.symbols.*;
 import com.company.inter.*;
 
+/*
+* program ----> block
+* block   ----> { decls stmts }
+* decls   ----> decls decl | '0'
+* decl    ----> type id;
+* type    ----> type [ num ] | basic
+* stmts   ----> stmts stmt | '0'
+*
+*
+* stmt    ----> loc = bool;
+*             | if(bool) stmt
+*             | if(bool) stmt else stmt
+*             | while(bool) stmt
+*             | do stmt while(bool);
+*             | break;
+*             | block
+*
+* loc     ----> loc [ bool ] | id
+*
+*
+*
+* bool    ----> bool || join | join
+* join    ----> join && equality | equality
+* equality----> equality == rel |equality != rel | rel
+* rel     ----> expr < expr | expr <= expr | expr >= expr
+*             | expr > expr | expr
+* expr    ----> expr + term | expr - term | term
+* term    ----> term * unary | term / unary | unary
+* unary   ----> ! unary | -unary | factor
+* factor  ----> (bool) | loc | num | real | true | false
+* */
+
 public class Parser {
     private Lexer lex;
     private Token look;
@@ -14,15 +46,21 @@ public class Parser {
         lex=l;
         move();
     }
+
     void move()throws IOException{
         look=lex.scan();
     }
+
     void error(String s){
         throw new Error("near line "+lex.line+": "+s);
     }
+
     void match(int t)throws IOException{
         if(look.tag==t){
-            if(look.toString().equals("}")){
+            /*
+            * $ will be File end character
+            * */
+            if(look.toString().equals('$')){
                 return ;
             }
             move();
@@ -107,13 +145,11 @@ public class Parser {
                 x=bool();
                 match(')');
                 s1=stmt();
-                /*
-                * source miss move function
-                * */
-                move();
+
                 if(look.tag!=Tag.ELSE){
                     return new If(x,s1);
                 }
+
                 match(Tag.ELSE);
                 s2=stmt();
                 return new Else(x,s1,s2);
@@ -125,6 +161,7 @@ public class Parser {
                 match('(');
                 x=bool();
                 match(')');
+
                 s1=stmt();
                 whilenode.init(x,s1);
                 Stmt.Enclosing=savedStmt;
@@ -135,8 +172,7 @@ public class Parser {
                 Stmt.Enclosing=donode;
                 match(Tag.DO);
                 s1=stmt();
-                move();
-                /* add move*/
+
                 match(Tag.WHILE);
                 match('(');
                 x=bool();
