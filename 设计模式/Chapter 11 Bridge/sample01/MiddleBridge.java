@@ -1,0 +1,8 @@
+public class MiddleBridge extends Bridge
+{
+	public void go(String name)
+	{
+		String penType="ÖÐºÅÃ«±Ê»æÖÆ";
+		this.(penType,name);			
+	}	
+}
