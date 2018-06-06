@@ -15,6 +15,5 @@
       <%=adminDao.getCource()%>
     </div>
   </div>
-
 </body>
 </html>

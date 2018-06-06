@@ -8,6 +8,7 @@
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/index.css" rel="stylesheet">
     <link href="../static/css/admin.css" rel="stylesheet">
+    <a class="link"
 </head>
 <body>
 

@@ -9,7 +9,11 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
-    /*数据查询*/
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
+
+/*数据查询*/
 public class AdminDAO {
     public String getNotes() throws SQLException {
         Statement stmt = null;
@@ -24,9 +28,16 @@ public class AdminDAO {
             String sql = "select * from notes" + ";";
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getString("title") + "</td>" + "<td>" + rs.getString("start_time") + "</td>" + "<td>" + rs.getString("stop_time") + "</td>" + "<td>" + rs.getString("description") + "</td>" +
-                        "<td><button type=\"button\" class=\"btn btn-success\">编辑</button></td>" +
-                        "<td><form action=\"../deletenotes\" method=\"post\"><input name=\"notes_id\" type=\"hidden\" value=\"" + rs.getString("notes_id") + "\"/><button type=\"button\" class=\"btn btn-danger\">删除</button></form></td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getString("title") + "</td>" + "<td>"
+                        + rs.getString("start_time") + "</td>" + "<td>" + rs.getString("stop_time")
+                        + "</td>" + "<td>" + rs.getString("description") + "</td>" +
+                        "<td><a class=\"btn btn-large \" " +
+                        "href=\"update_notes.jsp?notesid="+rs.getString("notes_id")+"\">编辑</a></td>" +
+                        "<td><form action=\"./deletenotes\" method=\"post\"><input name=\"notes_id\" type=\"hidden\" value=\""
+                        + rs.getString("notes_id") +
+                        "\"/><a class=\"btn btn-large \" " +
+                        "href=\"deletenotes.jsp?notesid="+rs.getString("notes_id")+"\">删除</a></form></td>" +
+                        "</tr>";
             }
             return str + "</table>";
         } catch (Exception e) {
@@ -34,7 +45,31 @@ public class AdminDAO {
         }
         return str;
     }
-
+    public TreeMap getPerNotes(String notes_id) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        TreeMap<String ,String> map = new TreeMap<String,String>();
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+//                System.out.println("notesid"+notes_id);
+            String sql = "select title,start_time,stop_time,description from notes where notes_id = "+notes_id;
+//                System.out.println(sql);
+            rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                map.put("title",rs.getString("title"));
+                map.put("start_time",rs.getString("start_time"));
+                map.put("stop_time",rs.getString("stop_time"));
+                map.put("description",rs.getString("description"));
+            }
+            return map ;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
     public String getUser() throws SQLException {
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
@@ -72,9 +107,18 @@ public class AdminDAO {
             String sql = "select cource_id, cource_name, credit, name, schooltime, location from score, user, cource, classroom where teacher=user_id and cource=cource_id and classroom=classroom_id" + ";";
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>" + rs.getString("cource_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "<td>" + rs.getString("location") + "</td>" +
-                        "<td><button type=\"button\" class=\"btn btn-success\">编辑</button></td>" +
-                        "<td><form action=\"../deletecource\" method=\"post\"><input name=\"cource_id\" type=\"hidden\" value=\"" + rs.getString("cource_id") + "\"/><button type=\"button\" class=\"btn btn-danger\">删除</button></form></td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>"
+                        + rs.getString("cource_name") + "</td>" + "<td>" +
+                        rs.getString("credit") + "</td>" + "<td>" + rs.getString("name") +
+                        "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "<td>" +
+                        rs.getString("location") + "</td>" +
+                        "<td><a class=\\\"btn btn-large \\\" \" +\n" +
+                        " <a href=\"updatecourse.jsp?courceid="+rs.getString("cource_id")+"\">编辑</a></td>" +
+                        "<td><input name=\"cource_id\" type=\"hidden\" value=\""
+                        + rs.getString("cource_id") +
+                        "\"/> <a href=\"deletecourse.jsp?courceid="+rs.getString("cource_id")+"\">删除</a></form></td>"
+                        + "</tr>";
+//                System.out.println(rs.getString("cource_id"));
             }
             return str + "</table>";
         } catch (Exception e) {
@@ -82,6 +126,70 @@ public class AdminDAO {
         }
         return str;
     }
+
+    public TreeMap getPerCource(String cource_id) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        TreeMap<String ,String> map = new TreeMap<String,String>();
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+//                System.out.println("notesid"+notes_id);
+            String sql = "select cource_id,cource_name,credit,teacher,classroom schooltime from cource where cource_id = "+cource_id;
+//                System.out.println(sql);
+            rs = stmt.executeQuery(sql);
+            while (rs.next()) {
+                map.put("cource_id",rs.getString("cource_id"));
+                map.put("credit",rs.getString("credit"));
+                map.put("teacher",rs.getString("teacher"));
+                map.put("classroom",rs.getString("classroom"));
+                map.put("schooltime",rs.getString("schooltime"));
+            }
+            return map ;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
+    public int updatecourses(TreeMap data,String cource_id) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        int result = 0;
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "update coruce set cource_name = '"+data.get("cource_name")+"',credit='"+data.get("credit")
+                    +"',teacher='"+data.get("teacher")+"',classroom='"
+                    +data.get("room")+"school_time='"+data.get("school_time")+"', where notes_id='"+cource_id+";";
+//            System.out.println(sql);
+            result = stmt.executeUpdate(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public int deletecourses(String coruce_id) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        int result = 0;
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "delete  from  cource where cource_id="+coruce_id+";";
+            System.out.println(sql);
+            result = stmt.executeUpdate(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
 
     public String getClassroom() throws SQLException {
         Statement stmt = null;
@@ -120,7 +228,12 @@ public class AdminDAO {
             String sql = "select cource_id, cource_name, credit, school_num, name, schooltime, location from score, user, cource, classroom where student=user_id and cource=cource_id and classroom=classroom_id" + ";";
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>" + rs.getString("cource_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "<td>" + rs.getString("location") + "</td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" +
+                        "<td>" + rs.getString("cource_name") + "</td>" + "<td>" +
+                        rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num")
+                        + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" +
+                        rs.getString("schooltime") + "</td>" + "<td>" + rs.getString("location")
+                        + "</td>" + "</tr>";
             }
             return str + "</table>";
         } catch (Exception e) {
@@ -199,7 +312,6 @@ public class AdminDAO {
             pst = con.prepareStatement(sql);
             pst.setString(1, classroom.getLocation());
             pst.setString(2, classroom.getCapacity());
-
             pst.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -208,7 +320,7 @@ public class AdminDAO {
     }
 
 
-    /*删除数据*/
+    /*删除公告*/
     public Notes notesdelete(Connection con, Notes notes) throws SQLException {
         PreparedStatement pst = null;
         try {
@@ -221,54 +333,90 @@ public class AdminDAO {
         }
         return null;
     }
-        public int updtaePassword(String password,String email) throws SQLException {
-            Statement stmt = null;
-            Dbutil dbutil = new Dbutil();
-            Connection con = null;
-            int result = 0;
-            try{
-                con = dbutil.getCon();
-                stmt = con.createStatement();
-                String sql = "update user set password='"+password+"' where email='"+ email+"';";
-                System.out.println(sql);
-                result = stmt.executeUpdate(sql);
-            }catch (Exception e) {
-                e.printStackTrace();
-            }
-            return result;
+    public int deletenotes(String notes_id) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        int result = 0;
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "delete  from  notes where notes_id="+notes_id+";";
+            System.out.println(sql);
+            result = stmt.executeUpdate(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        public int  addCourse(String course,int score,String teacher,String schooltime,String classroom)
-                throws SQLException {
-            Statement stmt = null;
-            Dbutil dbutil = new Dbutil();
-            Connection con = null;
-            ResultSet rs = null;
-            int max_course_id = 1020;
-            int result=0;
-            try {
-                con = dbutil.getCon();
-                stmt = con.createStatement();
-                String sql = "select max(cource_id) from cource;";
-                System.out.println(sql);
-                rs = stmt.executeQuery(sql);
-                while (rs.next()){
-                    max_course_id = rs.getInt(1);
-                }
-                System.out.println("course: "+max_course_id);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-           max_course_id =  max_course_id+1;
-            try {
-                con = dbutil.getCon();
-                stmt = con.createStatement();
-                String sql = "insert into cource VALUES('"+max_course_id+"','"+course+"','"+score+"','"+teacher+"','" +classroom+"','"+schooltime+"');";
-                System.out.println(sql);
-               result =  stmt.executeUpdate(sql);
-                System.out.println(result);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return result;
+        return result;
+    }
+    public int updatenotes(TreeMap data,String notes_id) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        int result = 0;
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "update notes set title = '"+data.get("title")+"',start_time='"+data.get("start_time")
+                    +"',stop_time='"+data.get("stop_time")+"',description='"
+                    +data.get("description")+"' where notes_id="+notes_id+";";
+//            System.out.println(sql);
+            result = stmt.executeUpdate(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return result;
+    }
+    public int updtaePassword(String password,String email) throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        int result = 0;
+        try{
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "update user set password='"+password+"' where email='"+ email+"';";
+            System.out.println(sql);
+            result = stmt.executeUpdate(sql);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public int  addCourse(String course,int score,String teacher,String schooltime,String classroom)
+            throws SQLException {
+        Statement stmt = null;
+        Dbutil dbutil = new Dbutil();
+        Connection con = null;
+        ResultSet rs = null;
+        int max_course_id = 1020;
+        int result=0;
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "select max(cource_id) from cource;";
+            System.out.println(sql);
+            rs = stmt.executeQuery(sql);
+            while (rs.next()){
+                max_course_id = rs.getInt(1);
+            }
+            System.out.println("course: "+max_course_id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        max_course_id =  max_course_id+1;
+        try {
+            con = dbutil.getCon();
+            stmt = con.createStatement();
+            String sql = "insert into cource VALUES('"+max_course_id+"','"+course+"','"+score+"','"+teacher+"','" +classroom+"','"+schooltime+"');";
+            System.out.println(sql);
+            result =  stmt.executeUpdate(sql);
+            System.out.println(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
 }
