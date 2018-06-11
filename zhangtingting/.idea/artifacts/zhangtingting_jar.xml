@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="zhangtingting:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/zhangtingting_jar</output-path>
+    <root id="archive" name="zhangtingting.jar">
+      <element id="module-output" name="zhangtingting" />
+    </root>
+  </artifact>
+</component>

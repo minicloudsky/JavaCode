@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class TeacherDAO {
-    public String getCource() throws SQLException{
+    public String getCourse() throws SQLException{
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
         Connection con = null;
@@ -16,10 +16,10 @@ public class TeacherDAO {
         try{
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select cource_id, cource_name, name, location, schooltime from cource, user, classroom where teacher=user_id and classroom=classroom_id" + ";";
+            String sql = "select course_id, course_name, name, location, schooltime from course, user, classroom where teacher=user_id and classroom=classroom_id" + ";";
             rs = stmt.executeQuery(sql);
             while(rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>" + rs.getString("cource_name") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("location") + "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getInt("course_id") + "</td>" + "<td>" + rs.getString("course_name") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("location") + "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "</tr>";
             }
             return str + "</table>";
         }catch (Exception e) {
@@ -38,10 +38,10 @@ public class TeacherDAO {
         try{
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select cource_id, cource_name, credit, school_num, name, pingshi_score, qimo_score, final_score from score, user, cource where student=user_id and cource=cource_id" + ";";
+            String sql = "select course_id, course_name, credit, school_num, name, pingshi_score, qimo_score, final_score from score, user, course where student=user_id and course=course_id" + ";";
             rs = stmt.executeQuery(sql);
             while(rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>" + rs.getString("cource_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("pingshi_score") + "</td>" + "<td>" + rs.getString("qimo_score") + "</td>" + "<td>" + rs.getString("final_score") + "</td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getInt("course_id") + "</td>" + "<td>" + rs.getString("course_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("pingshi_score") + "</td>" + "<td>" + rs.getString("qimo_score") + "</td>" + "<td>" + rs.getString("final_score") + "</td>" + "</tr>";
             }
             return str + "</table>";
         }catch (Exception e) {
@@ -50,7 +50,7 @@ public class TeacherDAO {
         return str;
     }
 
-    public String getScource() throws SQLException{
+    public String getScourse() throws SQLException{
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
         Connection con = null;
@@ -60,10 +60,10 @@ public class TeacherDAO {
         try{
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select cource_id, cource_name, credit, school_num, name, schooltime, location from score, user, cource, classroom where student=user_id and cource=cource_id and classroom=classroom_id" + ";";
+            String sql = "select course_id, course_name, credit, school_num, name, schooltime, location from score, user, course, classroom where student=user_id and course=course_id and classroom=classroom_id" + ";";
             rs = stmt.executeQuery(sql);
             while(rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>" + rs.getString("cource_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "<td>" + rs.getString("location") + "</td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getInt("course_id") + "</td>" + "<td>" + rs.getString("course_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "<td>" + rs.getString("location") + "</td>" + "</tr>";
             }
             return str + "</table>";
         }catch (Exception e) {

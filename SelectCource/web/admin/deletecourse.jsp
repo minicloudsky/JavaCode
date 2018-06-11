@@ -2,9 +2,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="base.jsp"%>
 <%
-    String courcesid = request.getParameter("courcesid");
+    String coursesid = request.getParameter("coursesid");
     AdminDAO adminDAO= new AdminDAO();
-    int result =  adminDAO.deletecourses(courcesid);
+    int result =  adminDAO.deletecourses(coursesid);
     if(result==1){
 %>
 

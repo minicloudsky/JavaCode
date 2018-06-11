@@ -42,12 +42,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程查询 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="infocource.jsp">课程查询</a></li>
+                            <li><a href="infocourse.jsp">课程查询</a></li>
                         </ul>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学生信息 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="scource.jsp">学生选课信息</a></li>
+                            <li><a href="scourse.jsp">学生选课信息</a></li>
                             <li><a href="score.jsp">学生成绩信息</a></li>
                         </ul>
                     </li>

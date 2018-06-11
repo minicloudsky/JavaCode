@@ -60,8 +60,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程管理 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="courceadd.jsp">添加课程</a></li>
-                            <li><a href="cource.jsp">课程管理</a></li>
+                            <li><a href="courseadd.jsp">添加课程</a></li>
+                            <li><a href="course.jsp">课程管理</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -74,7 +74,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学生信息管理 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="scource.jsp">学生选课管理</a></li>
+                            <li><a href="scourse.jsp">学生选课管理</a></li>
                             <li><a href="score.jsp">学生成绩管理</a></li>
                         </ul>
                     </li>

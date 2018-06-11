@@ -94,7 +94,7 @@ public class AdminDAO {
         return str;
     }
 
-    public String getCource() throws SQLException {
+    public String getCourse() throws SQLException {
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
         Connection con = null;
@@ -104,21 +104,21 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select cource_id, cource_name, credit, name, schooltime, location from score, user, cource, classroom where teacher=user_id and cource=cource_id and classroom=classroom_id" + ";";
+            String sql = "select course_id, course_name, credit, name, schooltime, location from score, user, course, classroom where teacher=user_id and course=course_id and classroom=classroom_id" + ";";
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>"
-                        + rs.getString("cource_name") + "</td>" + "<td>" +
+                str = str + "<tr>" + "<td>" + rs.getInt("course_id") + "</td>" + "<td>"
+                        + rs.getString("course_name") + "</td>" + "<td>" +
                         rs.getString("credit") + "</td>" + "<td>" + rs.getString("name") +
                         "</td>" + "<td>" + rs.getString("schooltime") + "</td>" + "<td>" +
                         rs.getString("location") + "</td>" +
                         "<td><a class=\\\"btn btn-large \\\" \" +\n" +
-                        " <a href=\"updatecourse.jsp?courceid="+rs.getString("cource_id")+"\">编辑</a></td>" +
-                        "<td><input name=\"cource_id\" type=\"hidden\" value=\""
-                        + rs.getString("cource_id") +
-                        "\"/> <a href=\"deletecourse.jsp?courceid="+rs.getString("cource_id")+"\">删除</a></form></td>"
+                        " <a href=\"updatecourse.jsp?courseid="+rs.getString("course_id")+"\">编辑</a></td>" +
+                        "<td><input name=\"course_id\" type=\"hidden\" value=\""
+                        + rs.getString("course_id") +
+                        "\"/> <a href=\"deletecourse.jsp?courseid="+rs.getString("course_id")+"\">删除</a></form></td>"
                         + "</tr>";
-//                System.out.println(rs.getString("cource_id"));
+//                System.out.println(rs.getString("course_id"));
             }
             return str + "</table>";
         } catch (Exception e) {
@@ -127,7 +127,7 @@ public class AdminDAO {
         return str;
     }
 
-    public TreeMap getPerCource(String cource_id) throws SQLException {
+    public TreeMap getPerCourse(String course_id) throws SQLException {
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
         Connection con = null;
@@ -137,11 +137,11 @@ public class AdminDAO {
             con = dbutil.getCon();
             stmt = con.createStatement();
 //                System.out.println("notesid"+notes_id);
-            String sql = "select cource_id,cource_name,credit,teacher,classroom schooltime from cource where cource_id = "+cource_id;
+            String sql = "select * from course where course_id = "+course_id;
 //                System.out.println(sql);
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                map.put("cource_id",rs.getString("cource_id"));
+                map.put("course_id",rs.getString("course_id"));
                 map.put("credit",rs.getString("credit"));
                 map.put("teacher",rs.getString("teacher"));
                 map.put("classroom",rs.getString("classroom"));
@@ -153,7 +153,7 @@ public class AdminDAO {
         }
         return map;
     }
-    public int updatecourses(TreeMap data,String cource_id) throws SQLException {
+    public int updatecourses(TreeMap data,String course_id) throws SQLException {
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
         Connection con = null;
@@ -162,9 +162,9 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "update coruce set cource_name = '"+data.get("cource_name")+"',credit='"+data.get("credit")
+            String sql = "update coruce set course_name = '"+data.get("course_name")+"',credit='"+data.get("credit")
                     +"',teacher='"+data.get("teacher")+"',classroom='"
-                    +data.get("room")+"school_time='"+data.get("school_time")+"', where notes_id='"+cource_id+";";
+                    +data.get("room")+"school_time='"+data.get("school_time")+"', where notes_id='"+course_id+";";
 //            System.out.println(sql);
             result = stmt.executeUpdate(sql);
         } catch (Exception e) {
@@ -181,7 +181,7 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "delete  from  cource where cource_id="+coruce_id+";";
+            String sql = "delete  from  course where course_id="+coruce_id+";";
             System.out.println(sql);
             result = stmt.executeUpdate(sql);
         } catch (Exception e) {
@@ -215,7 +215,7 @@ public class AdminDAO {
         return str;
     }
 
-    public String getScource() throws SQLException {
+    public String getScourse() throws SQLException {
         Statement stmt = null;
         Dbutil dbutil = new Dbutil();
         Connection con = null;
@@ -225,11 +225,11 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select cource_id, cource_name, credit, school_num, name, schooltime, location from score, user, cource, classroom where student=user_id and cource=cource_id and classroom=classroom_id" + ";";
+            String sql = "select course_id, course_name, credit, school_num, name, schooltime, location from score, user, course, classroom where student=user_id and course=course_id and classroom=classroom_id" + ";";
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" +
-                        "<td>" + rs.getString("cource_name") + "</td>" + "<td>" +
+                str = str + "<tr>" + "<td>" + rs.getInt("course_id") + "</td>" +
+                        "<td>" + rs.getString("course_name") + "</td>" + "<td>" +
                         rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num")
                         + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" +
                         rs.getString("schooltime") + "</td>" + "<td>" + rs.getString("location")
@@ -252,10 +252,10 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select cource_id, cource_name, credit, school_num, name, pingshi_score, qimo_score, final_score from score, user, cource where student=user_id and cource=cource_id" + ";";
+            String sql = "select course_id, course_name, credit, school_num, name, pingshi_score, qimo_score, final_score from score, user, course where student=user_id and course=course_id" + ";";
             rs = stmt.executeQuery(sql);
             while (rs.next()) {
-                str = str + "<tr>" + "<td>" + rs.getInt("cource_id") + "</td>" + "<td>" + rs.getString("cource_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("pingshi_score") + "</td>" + "<td>" + rs.getString("qimo_score") + "</td>" + "<td>" + rs.getString("final_score") + "</td>" + "</tr>";
+                str = str + "<tr>" + "<td>" + rs.getInt("course_id") + "</td>" + "<td>" + rs.getString("course_name") + "</td>" + "<td>" + rs.getString("credit") + "</td>" + "<td>" + rs.getString("school_num") + "</td>" + "<td>" + rs.getString("name") + "</td>" + "<td>" + rs.getString("pingshi_score") + "</td>" + "<td>" + rs.getString("qimo_score") + "</td>" + "<td>" + rs.getString("final_score") + "</td>" + "</tr>";
             }
             return str + "</table>";
         } catch (Exception e) {
@@ -396,7 +396,7 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "select max(cource_id) from cource;";
+            String sql = "select max(course_id) from course;";
             System.out.println(sql);
             rs = stmt.executeQuery(sql);
             while (rs.next()){
@@ -410,7 +410,7 @@ public class AdminDAO {
         try {
             con = dbutil.getCon();
             stmt = con.createStatement();
-            String sql = "insert into cource VALUES('"+max_course_id+"','"+course+"','"+score+"','"+teacher+"','" +classroom+"','"+schooltime+"');";
+            String sql = "insert into course VALUES('"+max_course_id+"','"+course+"','"+score+"','"+teacher+"','" +classroom+"','"+schooltime+"');";
             System.out.println(sql);
             result =  stmt.executeUpdate(sql);
             System.out.println(result);

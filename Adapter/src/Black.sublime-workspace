@@ -244,64 +244,10 @@
 	"buffers":
 	[
 		{
-			"file": "/D/Software/idea/Javacode/DBControl/web/index.html",
+			"file": "/C/Users/qiyu/Downloads/Educational-Administration-Management-System-master/testmanagementsystem.sql",
 			"settings":
 			{
-				"buffer_size": 470,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Software/idea/Javacode/DBControl/web/insert.jsp",
-			"settings":
-			{
-				"buffer_size": 2182,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Software/idea/Javacode/DBControl/web/menu.jsp",
-			"settings":
-			{
-				"buffer_size": 550,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Software/idea/Javacode/DBControl/web/select.jsp",
-			"settings":
-			{
-				"buffer_size": 1040,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Software/idea/Javacode/DBControl/web/delete.jsp",
-			"settings":
-			{
-				"buffer_size": 583,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "public int notesDelete(String notes_id) throws SQLException {\n        Statement stmt = null;\n        Dbutil dbutil = new Dbutil();\n        Connection con = null;\n        ResultSet rs = null;\n        int result = 0;\n        try {\n            con = dbutil.getCon();\n            stmt = con.createStatement();\n            String sql = \"delete  from  notes where notes_id=\"+notes_id+\";\";\n            System.out.println(sql);\n            result = stmt.executeUpdate(sql);\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n        return result;\n    }",
-			"settings":
-			{
-				"buffer_size": 569,
-				"line_ending": "Windows",
-				"name": "public int notesDelete(String notes_id) throws SQL"
-			}
-		},
-		{
-			"file": "/D/Software/idea/Javacode/DBControl/web/update.jsp",
-			"settings":
-			{
-				"buffer_size": 2903,
+				"buffer_size": 12635,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -360,6 +306,77 @@
 	},
 	"file_history":
 	[
+		"/F/blog/web/manager/class-edit.jsp",
+		"/C/Users/qiyu/Downloads/ueditor/jsp/controller.jsp",
+		"/D/Software/idea/Javacode/blog/src/com/dal/Blog.java",
+		"/D/Software/idea/Javacode/blog/src/com/dal/Comment.java",
+		"/D/Software/idea/Javacode/状态模式/src/Main.java",
+		"/D/Software/idea/Javacode/状态模式/src/PatternDesign.java",
+		"/D/Software/pycharm/PythonCode/My_selenium/zhihu_question.py",
+		"/C/Users/qiyu/Downloads/jsp课本/JSP程序设计书本源代码(第2版)/ch9/choiceDatabase.jsp",
+		"/C/Users/qiyu/Downloads/jsp课本/JSP程序设计书本源代码(第2版)/ch10/lookOrderForm.jsp",
+		"/C/Users/qiyu/Downloads/jsp课本/JSP程序设计书本源代码(第2版)/ch9/lookPic.jsp",
+		"/C/Users/qiyu/Downloads/jsp课本/JSP程序设计书本源代码(第2版)/ch2/example2_7.jsp",
+		"/D/[www.java1234.com]jsp校园宿舍管理系统分享/sushe/src/com/action/StudentAddSave.java",
+		"/D/Software/idea/Javacode/SelectCource/web/student/scource.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/course.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/courseadd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/deletecourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/deletenotes.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/index.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/notesadd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/notesmanage.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/score.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/scourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/update_notes.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/updatecourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/user.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/useradd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/userimport.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/base.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/changeinfo.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/changepasswd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/index.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/infoscore.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/infoscourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/notes.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/base.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/changeinfo.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/changepasswd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/classroom.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/admin/classroomadd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/student/scourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/base.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/changeinfo.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/changepasswd.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/index.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/infocourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/score.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/teacher/scourse.jsp",
+		"/D/Software/idea/Javacode/SelectCource/web/index.jsp",
+		"/C/Users/qiyu/Downloads/jsp/SelectCource-master/src/lib/Dao/AdminDAO.java",
+		"/D/Software/idea/Javacode/SelectCource/web/signout.jsp",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Dao/AdminDAO.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Dao/Dbutil.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Dao/StudentDAO.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Dao/TeacherDAO.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Dao/UserDao.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Model/Classroom.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Model/Course.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Model/Notes.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Model/User.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/Model/UserAdd.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/servlet/ClassroomaddServlet.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/servlet/NotesaddServlet.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/servlet/NotesdeleteServlet.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/servlet/SigninServlet.java",
+		"/D/Software/idea/Javacode/SelectCource/src/lib/servlet/UseraddServlet.java",
+		"/D/Software/idea/Javacode/DBControl/web/update.jsp",
+		"/D/Software/idea/Javacode/DBControl/web/delete.jsp",
+		"/D/Software/idea/Javacode/DBControl/web/select.jsp",
+		"/D/Software/idea/Javacode/DBControl/web/menu.jsp",
+		"/D/Software/idea/Javacode/DBControl/web/insert.jsp",
+		"/D/Software/idea/Javacode/DBControl/web/index.html",
 		"/D/Software/idea/Javacode/DBControl/src/com/ch6/Conn.java",
 		"/D/Software/idea/Javacode/DBControl/src/com/ch6/StudentInfo.java",
 		"/D/Software/idea/Javacode/DBControl/src/com/ch6/dal/Student.java",
@@ -369,7 +386,6 @@
 		"/D/Software/idea/Javacode/DBControl/web/index2.jsp",
 		"/D/Software/pycharm/PythonCode/My_Django/django-beginners-guide/.env.example",
 		"/C/Users/qiyu/Downloads/安卓/2048Game-master/README.md",
-		"/D/Software/idea/Javacode/SelectCource/src/lib/Dao/StudentDAO.java",
 		"/D/zhihu/你有哪些「异性暗示跟你交往，你却木讷地错过了」的经验/answer.txt",
 		"/C/Users/qiyu/Desktop/SelectCource/web/teacher/changeinfo.jsp",
 		"/D/zhihu/你错过了哪些异性对你的暗示？ 你的哪些暗示没有被异性理解/answer.txt",
@@ -383,12 +399,10 @@
 		"/C/Users/qiyu/Downloads/web-design-master/My_php/blog/index.php",
 		"/C/Users/qiyu/Downloads/web-design-master/My_php/blog/del.php",
 		"/D/Software/pycharm/PythonCode/spiders/requests_proxy.py",
-		"/D/Software/idea/Javacode/DBControl/web/update.jsp",
 		"/C/Users/qiyu/Downloads/web-design-master/My_php/blog/edit.php",
 		"/C/Users/qiyu/Downloads/web-design-master/My_php/blog/add.php",
 		"/D/Software/pycharm/PythonCode/spiders/bs4_find_ul.py",
 		"/C/Users/qiyu/Downloads/SelectCource-master/CreateDatabase.sh",
-		"/D/Software/pycharm/PythonCode/My_selenium/zhihu_question.py",
 		"/D/Software/hexotest/blog/source/_posts/她那时候还太年轻，不知道所有命运赠送的礼物，早已在暗中标好了价格。.md",
 		"/D/Software/hexotest/blog/source/_posts/Sometimes-native.md",
 		"/D/Software/pycharm/PythonCode/My_selenium/get_zhihu_question_answer.py",
@@ -419,79 +433,11 @@
 		"/C/Users/qiyu/Downloads/[BTBT.TV出品][苹果][范冰冰_未删减完整版][0 B].torrent",
 		"/D/Software/pycharm/PythonCode/README.md",
 		"/D/Software/pycharm/PythonCode/spider/baiduspider.py",
-		"/D/Software/pycharm/PythonCode/spider/weixin.py",
-		"/D/Software/pycharm/PythonCode/spider/qzone.py",
-		"/D/Software/pycharm/PythonCode/spider/douban_movie_spider.py",
-		"/D/Software/pycharm/PythonCode/spider/douban_comments.py",
-		"/D/Software/pycharm/PythonCode/My_selenium/loginto_qq.py",
-		"/D/Software/pycharm/PythonCode/My_selenium/User-Agent-random.py",
-		"/D/Software/pycharm/PythonCode/spider/QzoneAlbum.py",
-		"/D/Software/pycharm/PythonCode/spider/my_selenium.py",
-		"/D/Software/pycharm/PythonCode/My_excel/excel.py",
-		"/D/Software/pycharm/PythonCode/requests_spider/test.py",
-		"/D/Software/pycharm/PythonCode/My_selenium/votebar.py",
-		"/D/Software/pycharm/PythonCode/py/weib.py",
-		"/D/Software/pycharm/PythonCode/py/a and b.py",
-		"/D/Software/pycharm/PythonCode/earn_money/send_weibo.py",
-		"/D/Software/pycharm/PythonCode/clean_blog-master/README.md",
-		"/D/Software/baidu netdisk/BaiduNetdisk/AutoUpdate/kernelupdate.json",
-		"/E/Python3网络爬虫案例实战（崔庆才）/Python3网络爬虫实战案例 34课时/课件资料/爬虫课件与软件/main函数报错.py",
-		"/D/Software/pycharm/PythonCode/spider/weibo_spider.py",
-		"/D/Software/pycharm/PythonCode/spider/proxy.py",
-		"/D/Software/pycharm/PythonCode/zhihuuser/zhihuuser/spiders/zhihu.py",
-		"/D/Software/pycharm/PythonCode/zhihuuser/zhihuuser/spiders/__init__.py",
-		"/D/Software/pycharm/PythonCode/form/templates/about.html",
-		"/D/Software/pycharm/PythonCode/form/douban_movie_data/excel.py",
-		"/D/Software/pycharm/PythonCode/form/douban_movie_data/douban_api.py",
-		"/E/votebar/send_weibo.py",
-		"/C/Users/qiyu/Downloads/TaobaoProduct-master/spider.py",
-		"/C/Users/qiyu/Downloads/TaobaoProduct-master/config.py",
-		"/C/Users/qiyu/Downloads/yusi1.0/ajax/comment.php",
-		"/C/Users/qiyu/Downloads/Flarum-0.1.0-beta.4/README.md",
-		"/D/result.txt",
-		"/C/Users/qiyu/Downloads/crawler.py",
-		"/D/Software/codeblocks/MinGW/include/windows.h",
-		"/D/Software/codeblocks/MinGW/include/stdio.h",
-		"/D/Software/idea/Javacode/装饰器/out/production/TvFactory/AICar.class",
-		"/D/Software/qq/file/abc/bin/abc/Component.class",
-		"/D/Software/qq/file/abc/bin/abc/Activity.class",
-		"/D/Software/qq/file/abc/src/abc/Component.java",
-		"/D/Software/idea/Javacode/装饰器/src/Client.java",
-		"/D/Software/qq/file/abc/src/abc/Client.java",
-		"/C/Users/qiyu/Downloads/设计模式/Chapter 13 Decorator/sample02/Client.java",
-		"/C/Users/qiyu/Downloads/设计模式/Chapter 13 Decorator/sample02/SimpleCipher.java",
-		"/C/Users/qiyu/Downloads/crack.py",
-		"/C/Users/qiyu/Downloads/LagouSpider-master/人脸识别/in.o",
-		"/C/Users/qiyu/Downloads/Users/shawn/Desktop/python_trojan/keylogger/keyboard.py",
-		"/D/Software/pycharm/PythonCode/wxpy_test/转发影视消息.py",
-		"/C/Users/qiyu/Desktop/兑换记录-用户中心-投吧_files/ERDisplay.html",
-		"/C/Users/qiyu/Desktop/兑换记录-用户中心-投吧.html",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/manage.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/templates/topics.html",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/templates/topic_posts.html",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/templates/new_topic.html",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/templates/base.html",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/templates/home.html",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/accounts/views.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/boards/views.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/boards/models.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/boards/forms.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/myproject/__init__.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/myproject/settings.py",
-		"/D/Software/pycharm/PythonCode/blogproject/manage.py",
-		"/D/Software/pycharm/PythonCode/django-beginners-guide/boards/tests/test_view_home.py",
-		"/C/Users/qiyu/Downloads/os/Xv6-master/ulib.c",
-		"/C/Users/qiyu/Downloads/LagouSpider-master/人脸识别/tzxl.txt",
-		"/C/Users/qiyu/Downloads/LagouSpider-master/人脸识别/Print_Out.h",
-		"/C/Users/qiyu/Downloads/LagouSpider-master/人脸识别/All_h.h",
-		"/C/Users/qiyu/Downloads/LagouSpider-master/人脸识别/in.cpp",
-		"/C/Users/qiyu/Downloads/LagouSpider-master/人脸识别/low.txt",
-		"/D/Software/qq/file/C.java",
-		"/D/Software/pycharm/PythonCode/My_selenium/zhihu_User_API_withURL.py"
+		"/D/Software/pycharm/PythonCode/spider/weixin.py"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 50.0
 	},
 	"find_in_files":
 	{
@@ -505,6 +451,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"山东理工大学",
+			"许忠贤",
+			"徐忠贤",
+			"ource",
+			"<%@",
+			"ource",
+			"cource",
 			"九宫格",
 			"!",
 			"Color",
@@ -566,212 +519,88 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/Software/idea/Javacode/DBControl/web/index.html",
+					"file": "/C/Users/qiyu/Downloads/Educational-Administration-Management-System-master/testmanagementsystem.sql",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 470,
+						"buffer_size": 12635,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/D/Software/idea/Javacode/DBControl/web/insert.jsp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2182,
-						"regions":
-						{
-						},
-						"selection":
-						[
+								10402,
+								10402
+							],
 							[
-								264,
-								321
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java Server Pages (JSP).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1392.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/Software/idea/Javacode/DBControl/web/menu.jsp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 550,
-						"regions":
-						{
-						},
-						"selection":
-						[
+								10515,
+								10515
+							],
 							[
-								475,
-								475
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java Server Pages (JSP).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/Software/idea/Javacode/DBControl/web/select.jsp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1040,
-						"regions":
-						{
-						},
-						"selection":
-						[
+								10627,
+								10627
+							],
 							[
-								976,
-								976
+								10738,
+								10738
+							],
+							[
+								10852,
+								10852
+							],
+							[
+								10966,
+								10966
+							],
+							[
+								11078,
+								11078
+							],
+							[
+								11176,
+								11176
+							],
+							[
+								11288,
+								11288
+							],
+							[
+								11400,
+								11400
+							],
+							[
+								12141,
+								12141
+							],
+							[
+								12249,
+								12249
+							],
+							[
+								12357,
+								12357
+							],
+							[
+								12467,
+								12467
+							],
+							[
+								12577,
+								12577
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Java/Java Server Pages (JSP).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/SQL/SQL.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 435.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/Software/idea/Javacode/DBControl/web/delete.jsp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 583,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								417,
-								507
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java Server Pages (JSP).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 569,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								569
-							]
-						],
-						"settings":
-						{
-							"auto_name": "public int notesDelete(String notes_id) throws SQL",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/D/Software/idea/Javacode/DBControl/web/update.jsp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2903,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								476,
-								476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java Server Pages (JSP).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
