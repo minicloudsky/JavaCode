@@ -1,0 +1,120 @@
+1. 显示当前目录所有的文件和目录信息
+   > ls       //list
+   > ls  XX目录     //查看指定目录下边的文件信息
+
+2. 显示当前文件目录位置
+   > pwd
+
+3. 目录之间切换
+   > cd  目录名字
+   > cd  ..   切换到上级目录
+
+4. 切换到完全命令模式
+   > init 3      进入命令模式
+   > init 5      进入可视化操作界面
+
+5. 用户切换到超级管理员
+   > su - root    //$是普通用户    #是超级管理员
+   > su -
+   > su root   //也可以切换到root用户，但是没有超级管理员权限
+
+6. 超级管理员切换回普通用户
+   > exit
+
+7. 查看当前用户是谁
+   > whoami
+
+8. 输出一个文件内容
+   > cat  具体文件
+
+9. 创建目录make  directory
+   > mkdir  hello
+   > mkdir  hello/world
+   > mkdir -p first/second/third      //递归创建3个目录
+
+10. 给目录改名字move移动
+   > mv 旧名字   新名字
+   > mv book.ods  bread.ods
+   > mv first/second   first/six      //把second改名字为six
+
+11. 移动目录操作move
+   > mv  目标  新的地址
+   > mv  bread.ods   目录
+   > mv  ten/bread.ods  first   //移动，因为first目录存在
+     mv  ten/bread.ods  firstt  //改名字，并且移动文件到当前目录
+
+     mv  目标  地址      //移动，只要地址是存在的目录就是移动
+     mv  目标  地址      //改名字，地址只要不存在就是改名字
+
+12. 复制操作copy
+   > cp  源文件 复制文件
+   > cp -R  目录  目标目录      //复制"目录"需要添加参数-R
+   > cp 源文件  目标/新的名字   //复制的同时给起一个新的名字
+
+13. 删除目录、文件
+   > rm  文件      //删除单个文件
+   > rmdir  目录   //删除单个目录
+   > rm -rf  文件   //可以删除一切普通的目录或文件 递归recursive  强制force
+     rm -rf  /     //  kill your self
+
+14. 输出文件内容
+   > cat  文件     //一次性输出文件全部内容
+   > more  文件    //分页显示文件内容
+           敲回车查看下边的内容，不支持回看
+	   中间停止：q
+	   显示内容百分比
+   > less  文件    //分页显示文件内容
+           可以通过上、下、左、右查看文件具体内容
+	   停止：q
+	   没有百分比显示
+   > head -n  文件	//查看文件前n行内容
+   > tail -n  文件	//查看文件末尾n行内容
+
+15. 计算文件行数
+   > wc  文件		//计算文件行数
+
+16. 创建文件
+   > touch  filename	//创建文件
+
+17. 给文件添加内容
+   > echo content  >  filename   //给文件添加内容[覆盖添加内容，原内容被删除]
+   > echo 内容  >> filename	//给文件追加内容
+   > echo 内容  >/>>  newfilename   //会创建一个新的文件，并且有添加内容[重定向方式]
+
+
+18. 给系统增加一个用户
+   user   add/mod/del
+   > useradd  username		//添加一个用户
+     该方式创建用户，并没有显示设置用户的组
+   > useradd -g  NNN  用户名	//添加用户并设置组别
+   > useradd -g  NNN  -d  目录  用户名		//添加用户并设置家目录、组别
+   > useradd -u  XXX  用户名    //添加用户并显示设置用户编号
+
+18.1 修改用户
+   > usermod  -u 用户编号  -g  组编号  -d  家目录  用户名  //修改用户
+
+18.2 删除用户
+   > userdel -r 用户		//删除用户，并且删除家目录
+
+
+19. 给系统创建组
+   group  add/mod/del
+   groupadd  movie
+   groupadd  music
+   groupadd -g  XXX   组名	//添加组并设置组编号
+
+19.1 修改组
+   > groupmod -n  新名字   旧名字    //修改组的名字
+19.2 删除组
+   > groupdel  组名
+
+
+20. 查看系统用户信息
+   > cat /etc/passwd   用户信息
+   > cat /etc/group    组的信息
+
+21. 查看具体指令使用参数方法
+   > man  指令
+
+22. 给用户设置密码
+   > passwd  用户名     
