@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.Calculator</OriginalElement>
+  <nodes>
+    <node x="2266.607706374086" y="16179.5">java.awt.Container.WakingRunnable</node>
+    <node x="2175.443443051203" y="19089.5">java.awt.Container.MouseEventTargetFilter</node>
+    <node x="2981.107706374086" y="20299.0">java.awt.event.ActionListener</node>
+    <node x="1336.625" y="11912.0">java.awt.Component.DummyRequestFocusController</node>
+    <node x="5325.318443051203" y="11877.5">java.awt.Component.BaselineResizeBehavior</node>
+    <node x="4275.832706374086" y="19113.5">javax.swing.TransferHandler.HasGetTransferHandler</node>
+    <node x="1007.0243730407524" y="0.0">java.awt.image.ImageObserver</node>
+    <node x="5514.260828108673" y="19078.5">java.awt.Window.Type</node>
+    <node x="301.0" y="11669.5">java.awt.Component.FlipBufferStrategy</node>
+    <node x="1014.625" y="11727.0">java.awt.Component.BltBufferStrategy</node>
+    <node x="3224.651776384536" y="11531.5">java.awt.Component.AccessibleAWTComponent</node>
+    <node x="500.5358281086733" y="16168.0">java.awt.Component.FlipSubRegionBufferStrategy</node>
+    <node x="0.0" y="11912.0">java.awt.Component.ProxyCapabilities</node>
+    <node x="662.0" y="11853.5">java.awt.Component.SingleBufferStrategy</node>
+    <node x="2077.625" y="9887.0">java.awt.Container</node>
+    <node x="2465.607706374086" y="16098.0">java.awt.Container.AccessibleAWTContainer</node>
+    <node x="1783.1934430512026" y="19089.5">java.awt.Container.DropTargetEventTargetFilter</node>
+    <node x="4139.493443051203" y="19918.0">javax.swing.JFrame</node>
+    <node x="1063.625" y="16168.0">java.awt.Component.BltSubRegionBufferStrategy</node>
+    <node x="5140.707706374086" y="19055.0">java.awt.Window.WindowDisposerRecord</node>
+    <node x="4827.707706374086" y="18422.0">java.awt.Frame</node>
+    <node x="4785.885828108673" y="14074.0">java.awt.Window</node>
+    <node x="3792.8327063740862" y="19079.0">javax.swing.RootPaneContainer</node>
+    <node x="3038.675718390804" y="20783.0">com.Calculator</node>
+    <node x="4948.207706374086" y="69.0">java.awt.MenuContainer</node>
+    <node x="4667.75" y="11924.0">javax.accessibility.Accessible</node>
+    <node x="4731.568443051203" y="20263.5">java.awt.Frame.AccessibleAWTFrame</node>
+    <node x="2494.107706374086" y="20275.5">java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler</node>
+    <node x="1096.8577063740859" y="298.0">java.awt.Component</node>
+    <node x="1908.4434430512026" y="16191.5">java.awt.Container.EventTargetFilter</node>
+    <node x="5387.082706374086" y="104.0">java.io.Serializable</node>
+    <node x="3536.107706374086" y="20252.5">java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler</node>
+    <node x="1897.625" y="11924.0">java.awt.Component.AWTTreeLock</node>
+    <node x="3069.107706374086" y="19125.0">java.util.EventListener</node>
+    <node x="4538.707706374086" y="19078.0">java.awt.Window.AccessibleAWTWindow</node>
+    <node x="2827.107706374086" y="20299.0">com.Machine</node>
+    <node x="3270.107706374086" y="20275.5">java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler</node>
+    <node x="4018.8327063740862" y="19079.0">javax.swing.WindowConstants</node>
+    <node x="4606.053121734587" y="21002.0">javax.swing.JFrame.AccessibleJFrame</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="javax.swing.JFrame.AccessibleJFrame" target="java.awt.Frame.AccessibleAWTFrame">
+      <point x="67.25" y="-50.0" />
+      <point x="4807.803121734587" y="20758.0" />
+      <point x="4866.068443051203" y="20758.0" />
+      <point x="0.0" y="62.0" />
+    </edge>
+    <edge source="com.Calculator" target="java.awt.event.ActionListener">
+      <point x="0.0" y="-269.0" />
+      <point x="3173.175718390804" y="20758.0" />
+      <point x="3115.607706374086" y="20758.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.image.ImageObserver">
+      <point x="-169.33333333333348" y="-4754.5" />
+      <point x="0.0" y="119.0" />
+    </edge>
+    <edge source="java.awt.Container.WakingRunnable" target="java.awt.Container">
+      <point x="0.0" y="-38.5" />
+      <point x="2355.607706374086" y="14054.0" />
+      <point x="2330.125" y="14054.0" />
+      <point x="-50.5" y="2063.5" />
+    </edge>
+    <edge source="java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler" target="java.awt.Container.AccessibleAWTContainer">
+      <point x="-78.25" y="-50.0" />
+      <point x="-106.75" y="120.0" />
+    </edge>
+    <edge source="java.awt.Frame" target="java.awt.Window">
+      <point x="-73.25" y="-718.0" />
+      <point x="4900.957706374086" y="18402.0" />
+      <point x="4973.385828108673" y="18402.0" />
+      <point x="-62.5" y="2144.0" />
+    </edge>
+    <edge source="java.awt.Frame" target="java.awt.MenuContainer">
+      <point x="73.25" y="-718.0" />
+      <point x="5047.457706374086" y="18402.0" />
+      <point x="5296.385828108673" y="18402.0" />
+      <point x="5296.385828108673" y="258.0" />
+      <point x="5135.707706374086" y="258.0" />
+      <point x="62.5" y="50.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.accessibility.Accessible">
+      <point x="69.39999999999964" y="-407.5" />
+      <point x="4382.393443051203" y="19888.0" />
+      <point x="4527.332706374086" y="19888.0" />
+      <point x="4527.332706374086" y="14054.0" />
+      <point x="4733.5" y="14054.0" />
+      <point x="-65.75" y="26.5" />
+    </edge>
+    <edge source="java.awt.Component.FlipSubRegionBufferStrategy" target="java.awt.Component.FlipBufferStrategy">
+      <point x="-92.25" y="-50.0" />
+      <point x="592.7858281086733" y="14054.0" />
+      <point x="471.5" y="14054.0" />
+      <point x="0.0" y="281.0" />
+    </edge>
+    <edge source="java.awt.Window" target="javax.accessibility.Accessible">
+      <point x="125.0" y="-2144.0" />
+      <point x="5160.885828108673" y="14034.0" />
+      <point x="4865.0" y="14034.0" />
+      <point x="65.75" y="26.5" />
+    </edge>
+    <edge source="java.awt.Component.ProxyCapabilities" target="java.awt.Component">
+      <point x="0.0" y="-38.5" />
+      <point x="140.5" y="9827.0" />
+      <point x="1119.9486154649949" y="9827.0" />
+      <point x="-230.909090909091" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Window.AccessibleAWTWindow" target="java.awt.Container.AccessibleAWTContainer">
+      <point x="-67.25" y="-62.0" />
+      <point x="4605.957706374086" y="18402.0" />
+      <point x="2785.857706374086" y="18402.0" />
+      <point x="106.75" y="120.0" />
+    </edge>
+    <edge source="java.awt.Window.Type" target="java.io.Serializable">
+      <point x="27.0" y="-61.5" />
+      <point x="5595.260828108673" y="268.0" />
+      <point x="5486.832706374086" y="268.0" />
+      <point x="42.75" y="15.0" />
+    </edge>
+    <edge source="java.awt.Component.BltSubRegionBufferStrategy" target="java.awt.Component">
+      <point x="91.0" y="-50.0" />
+      <point x="1336.625" y="14054.0" />
+      <point x="1326.125" y="14054.0" />
+      <point x="1326.125" y="9867.0" />
+      <point x="1350.8577063740859" y="9867.0" />
+      <point x="0.0" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Component" target="java.io.Serializable">
+      <point x="169.33333333333326" y="-4754.5" />
+      <point x="1520.1910397074191" y="268.0" />
+      <point x="5401.332706374086" y="268.0" />
+      <point x="-42.75" y="15.0" />
+    </edge>
+    <edge source="java.awt.Window.WindowDisposerRecord" target="java.awt.Window">
+      <point x="0.0" y="-85.0" />
+      <point x="5312.207706374086" y="18392.0" />
+      <point x="5098.385828108673" y="18392.0" />
+      <point x="62.5" y="2144.0" />
+    </edge>
+    <edge source="java.awt.Container.DropTargetEventTargetFilter" target="java.awt.Container.EventTargetFilter">
+      <point x="61.25" y="-50.5" />
+      <point x="-58.5" y="26.5" />
+    </edge>
+    <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler" target="java.awt.Component.AccessibleAWTComponent">
+      <point x="61.5" y="-50.0" />
+      <point x="3454.607706374086" y="14054.0" />
+      <point x="3438.151776384536" y="14054.0" />
+      <point x="0.0" y="419.0" />
+    </edge>
+    <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler" target="java.util.EventListener">
+      <point x="-61.5" y="-50.0" />
+      <point x="3331.607706374086" y="19898.0" />
+      <point x="3146.607706374086" y="19898.0" />
+      <point x="15.5" y="15.0" />
+    </edge>
+    <edge source="java.awt.Container.AccessibleAWTContainer" target="java.awt.Component.AccessibleAWTComponent">
+      <point x="106.75" y="-120.0" />
+      <point x="2785.857706374086" y="14054.0" />
+      <point x="3295.8184430512024" y="14054.0" />
+      <point x="-142.33333333333348" y="419.0" />
+    </edge>
+    <edge source="com.Calculator" target="javax.swing.JFrame">
+      <point x="89.66666666666652" y="-269.0" />
+      <point x="3262.8423850574704" y="20758.0" />
+      <point x="4226.243443051203" y="20758.0" />
+      <point x="-86.75" y="407.5" />
+    </edge>
+    <edge source="java.awt.Component.BltBufferStrategy" target="java.awt.Component">
+      <point x="0.0" y="-223.5" />
+      <point x="1165.125" y="9867.0" />
+      <point x="1304.6758881922678" y="9867.0" />
+      <point x="-46.181818181818244" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Component.AWTTreeLock" target="java.awt.Component">
+      <point x="0.0" y="-26.5" />
+      <point x="1977.625" y="9857.0" />
+      <point x="1443.2213427377224" y="9857.0" />
+      <point x="92.36363636363649" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Component.AccessibleAWTComponent" target="java.awt.Component">
+      <point x="-106.75" y="-419.0" />
+      <point x="3331.401776384536" y="9837.0" />
+      <point x="1535.5849791013586" y="9837.0" />
+      <point x="184.72727272727275" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Container.AccessibleAWTContainer" target="java.awt.Container">
+      <point x="-106.75" y="-120.0" />
+      <point x="2572.357706374086" y="14054.0" />
+      <point x="2532.125" y="14054.0" />
+      <point x="151.5" y="2063.5" />
+    </edge>
+    <edge source="java.awt.Component.BaselineResizeBehavior" target="java.awt.Component">
+      <point x="-54.0" y="-73.0" />
+      <point x="5379.318443051203" y="9827.0" />
+      <point x="1581.7667972831769" y="9827.0" />
+      <point x="230.909090909091" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Container.MouseEventTargetFilter" target="java.awt.Container">
+      <point x="58.5" y="-50.5" />
+      <point x="2350.943443051203" y="18402.0" />
+      <point x="2455.107706374086" y="18402.0" />
+      <point x="2455.107706374086" y="14054.0" />
+      <point x="2431.125" y="14054.0" />
+      <point x="50.5" y="2063.5" />
+    </edge>
+    <edge source="java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler" target="java.util.EventListener">
+      <point x="78.25" y="-50.0" />
+      <point x="2728.857706374086" y="19898.0" />
+      <point x="3084.607706374086" y="19898.0" />
+      <point x="-46.5" y="15.0" />
+    </edge>
+    <edge source="java.awt.Frame.AccessibleAWTFrame" target="java.awt.Frame">
+      <point x="67.25" y="-62.0" />
+      <point x="4933.318443051203" y="19898.0" />
+      <point x="5047.457706374086" y="19898.0" />
+      <point x="73.25" y="718.0" />
+    </edge>
+    <edge source="java.awt.Component.AccessibleAWTComponent" target="java.io.Serializable">
+      <point x="106.75" y="-419.0" />
+      <point x="3544.901776384536" y="278.0" />
+      <point x="5429.832706374086" y="278.0" />
+      <point x="-14.25" y="15.0" />
+    </edge>
+    <edge source="com.Calculator" target="com.Machine">
+      <point x="-89.66666666666652" y="-269.0" />
+      <point x="3083.5090517241374" y="20758.0" />
+      <point x="2894.107706374086" y="20758.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="java.awt.Container.EventTargetFilter" target="java.awt.Container">
+      <point x="2.2737367544323206E-13" y="-26.5" />
+      <point x="2025.4434430512028" y="14054.0" />
+      <point x="2229.125" y="14054.0" />
+      <point x="-151.5" y="2063.5" />
+    </edge>
+    <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler" target="java.util.EventListener">
+      <point x="-78.75" y="-73.0" />
+      <point x="3614.857706374086" y="19888.0" />
+      <point x="3177.607706374086" y="19888.0" />
+      <point x="46.5" y="15.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.RootPaneContainer">
+      <point x="-138.80000000000018" y="-407.5" />
+      <point x="4174.193443051203" y="19898.0" />
+      <point x="3895.8327063740862" y="19898.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="java.awt.Container.MouseEventTargetFilter" target="java.awt.Container.EventTargetFilter">
+      <point x="-58.5" y="-50.5" />
+      <point x="2233.943443051203" y="18402.0" />
+      <point x="2083.943443051203" y="18402.0" />
+      <point x="58.50000000000023" y="26.5" />
+    </edge>
+    <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler" target="java.awt.Component.AccessibleAWTComponent">
+      <point x="78.75" y="-73.0" />
+      <point x="3772.357706374086" y="14054.0" />
+      <point x="3580.4851097178694" y="14054.0" />
+      <point x="142.33333333333348" y="419.0" />
+    </edge>
+    <edge source="java.awt.Component.DummyRequestFocusController" target="java.awt.Component">
+      <point x="0.0" y="-38.5" />
+      <point x="1607.125" y="9867.0" />
+      <point x="1397.039524555904" y="9867.0" />
+      <point x="46.181818181818244" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Window.AccessibleAWTWindow" target="java.awt.Window">
+      <point x="67.25" y="-62.0" />
+      <point x="4740.457706374086" y="18402.0" />
+      <point x="4848.385828108673" y="18402.0" />
+      <point x="-187.5" y="2144.0" />
+    </edge>
+    <edge source="java.awt.Window" target="java.awt.Container">
+      <point x="-125.0" y="-2144.0" />
+      <point x="4910.885828108673" y="14044.0" />
+      <point x="2633.125" y="14044.0" />
+      <point x="252.5" y="2063.5" />
+    </edge>
+    <edge source="java.awt.Frame.AccessibleAWTFrame" target="java.awt.Window.AccessibleAWTWindow">
+      <point x="-67.25" y="-62.0" />
+      <point x="4798.818443051203" y="19888.0" />
+      <point x="4673.207706374086" y="19888.0" />
+      <point x="0.0" y="62.0" />
+    </edge>
+    <edge source="java.awt.Component" target="java.awt.MenuContainer">
+      <point x="0.0" y="-4754.5" />
+      <point x="1350.8577063740859" y="258.0" />
+      <point x="5010.707706374086" y="258.0" />
+      <point x="-62.5" y="50.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="java.awt.Frame">
+      <point x="138.80000000000018" y="-407.5" />
+      <point x="4451.793443051203" y="19898.0" />
+      <point x="4900.957706374086" y="19898.0" />
+      <point x="-73.25" y="718.0" />
+    </edge>
+    <edge source="java.awt.Component.SingleBufferStrategy" target="java.awt.Component">
+      <point x="0.0" y="-97.0" />
+      <point x="812.0" y="9847.0" />
+      <point x="1212.3122518286314" y="9847.0" />
+      <point x="-138.5454545454545" y="4754.5" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.WindowConstants">
+      <point x="-69.39999999999964" y="-407.5" />
+      <point x="4243.593443051203" y="19888.0" />
+      <point x="4137.332706374086" y="19888.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="java.awt.Component.FlipBufferStrategy" target="java.awt.Component">
+      <point x="0.0" y="-281.0" />
+      <point x="471.5" y="9837.0" />
+      <point x="1166.130433646813" y="9837.0" />
+      <point x="-184.72727272727275" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Container.DropTargetEventTargetFilter" target="java.awt.Container">
+      <point x="-61.25" y="-50.5" />
+      <point x="1844.4434430512026" y="18402.0" />
+      <point x="1897.9434430512026" y="18402.0" />
+      <point x="1897.9434430512026" y="14044.0" />
+      <point x="2128.125" y="14044.0" />
+      <point x="-252.5" y="2063.5" />
+    </edge>
+    <edge source="javax.swing.JFrame.AccessibleJFrame" target="javax.swing.JFrame">
+      <point x="-67.25" y="-50.0" />
+      <point x="4673.303121734587" y="20758.0" />
+      <point x="4399.743443051203" y="20758.0" />
+      <point x="86.75" y="407.5" />
+    </edge>
+    <edge source="java.awt.Component.BaselineResizeBehavior" target="java.io.Serializable">
+      <point x="54.0" y="-73.0" />
+      <point x="5487.318443051203" y="278.0" />
+      <point x="5458.332706374086" y="278.0" />
+      <point x="14.25" y="15.0" />
+    </edge>
+    <edge source="java.awt.Component.BltSubRegionBufferStrategy" target="java.awt.Component.BltBufferStrategy">
+      <point x="-91.0" y="-50.0" />
+      <point x="1154.625" y="14054.0" />
+      <point x="1165.125" y="14054.0" />
+      <point x="0.0" y="223.5" />
+    </edge>
+    <edge source="java.awt.event.ActionListener" target="java.util.EventListener">
+      <point x="0.0" y="-26.5" />
+      <point x="-15.5" y="15.0" />
+    </edge>
+    <edge source="javax.swing.JFrame" target="javax.swing.TransferHandler.HasGetTransferHandler">
+      <point x="0.0" y="-407.5" />
+      <point x="4312.993443051203" y="19878.0" />
+      <point x="4396.332706374086" y="19878.0" />
+      <point x="0.0" y="26.5" />
+    </edge>
+    <edge source="java.awt.Window.Type" target="java.awt.Window">
+      <point x="-27.0" y="-61.5" />
+      <point x="5541.260828108673" y="18382.0" />
+      <point x="5223.385828108673" y="18382.0" />
+      <point x="187.5" y="2144.0" />
+    </edge>
+    <edge source="java.awt.Container" target="java.awt.Component">
+      <point x="0.0" y="-2063.5" />
+      <point x="2380.625" y="9847.0" />
+      <point x="1489.4031609195404" y="9847.0" />
+      <point x="138.5454545454545" y="4754.5" />
+    </edge>
+    <edge source="java.awt.Component.FlipSubRegionBufferStrategy" target="java.awt.Component">
+      <point x="92.25" y="-50.0" />
+      <point x="777.2858281086733" y="14054.0" />
+      <point x="972.5" y="14054.0" />
+      <point x="972.5" y="9857.0" />
+      <point x="1258.4940700104494" y="9857.0" />
+      <point x="-92.36363636363649" y="4754.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.03326929384752354" x="2811.5" y="10660.500000000002" />
+  <SelectedNodes>
+    <node>com.Calculator</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
