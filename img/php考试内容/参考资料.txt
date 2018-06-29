@@ -1,0 +1,3 @@
+strlen($str)//求字符串长度
+is_numeric($s)//判断字符是不是数字
+ord($s)//求字符的ascii码值
