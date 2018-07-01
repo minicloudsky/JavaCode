@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_color">#54B0E9</color>
+
+    <color name="launcher_item_select">#54B0E9</color>
+    <color name="launcher_item_normal">#9B9B9B</color>
+
+    <color name="white_normal">#ffffff</color>
+    <color name="light_gray">#c0c0c0</color>
+
+
+    <color name="split_line">#E7E7E7</color>
+
+    <color name="menu_left_item_select">#EEEEEE</color>
+
+    <color name="menu_left_item_text_select">#54B0E9</color>
+    <color name="menu_left_item_text_normal">#000000</color>
+
+    <!--加载动画的圆圈颜色-->
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+
+
+</resources>

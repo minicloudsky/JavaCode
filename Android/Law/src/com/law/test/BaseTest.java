@@ -1,0 +1,16 @@
+package com.law.test;
+
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+/**
+ * 配置spring和junit整合，junit启东市加载springIOC容器 srping-text，junit
+ * @author DELL
+ *
+**/
+@RunWith(SpringJUnit4ClassRunner.class)
+//告诉junit spring配置文件
+@ContextConfiguration({"classpath:applicationContext.xml"})
+public class BaseTest {
+	
+}

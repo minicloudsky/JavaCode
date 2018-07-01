@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.law.mapper.UserMapper">
+	<resultMap type="com.law.pojo.User" id="userResultMap" >
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="user_name" property="userName" jdbcType="VARCHAR"/>
+		<result column="user_phone" property="userPhone" jdbcType="VARCHAR"/>
+		<result column="user_gender" property="userGender" jdbcType="VARCHAR"/>
+		<result column="user_birth" property="userBirth" jdbcType="VARCHAR"/>
+		<result column="user_profession" property="userProfession" jdbcType="VARCHAR"/>
+		<result column="user_headimg" property="userHeadimg" jdbcType="VARCHAR"/>
+	</resultMap>
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryById" resultMap="userResultMap" parameterType="_long">
+        <!-- 具体的sql -->
+        SELECT
+            *
+        FROM
+            user
+        WHERE
+            id = #{id}
+    </select>
+
+    <select id="queryAll" resultMap="userResultMap">
+        SELECT
+           *
+        FROM
+            study
+        ORDER BY
+            id
+    </select>
+
+    <select id="queryByName" resultMap="userResultMap" parameterType="String">
+        <!-- 具体的sql -->
+        SELECT
+            *
+        FROM
+            user
+        WHERE
+            user_name = #{userName}
+    </select>
+     <select id="queryByPhone" resultMap="userResultMap" parameterType="String">
+        <!-- 具体的sql -->
+        SELECT
+            *
+        FROM
+            user
+        WHERE
+            user_phone = #{userPhone}
+    </select>
+	<insert id="insert"  parameterType="User">
+		INSERT ignore INTO 
+		user(
+			user_name,
+			user_phone,
+			user_gender,
+			user_birth,
+			user_profession,
+			user_headimg)
+		VALUES(
+			#{userName},
+			#{userPhone},
+			#{userGender},
+			#{userBirth},
+			#{userProfession},
+			#{userHeadimg})
+	</insert>
+
+    <update id="update" parameterType="User">
+        UPDATE user
+        SET
+         user_name = #{userName},
+         user_phone = #{userPhone},
+         user_gender = #{userGender},
+         user_birth = #{userBirth},
+         user_profession = #{userProfession},
+         user_headimg = #{userHeadimg}
+        WHERE
+            id = #{id}
+    </update>
+    
+    <delete id="delete" parameterType="_long">
+       DELETE 
+       FROM user
+       WHERE id = #{id}
+    </delete>
+</mapper>

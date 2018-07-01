@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/memory_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/memory_content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/floatingActionButton_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/write0"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
+
+    <LinearLayout
+        android:id="@+id/memory_load_more"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="#b5000000"
+        android:orientation="vertical">
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:indicator="Pacman"
+            app:indicator_color="#5677fc"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/white_normal"
+            android:text="加载中..."/>
+    </LinearLayout>
+</RelativeLayout>

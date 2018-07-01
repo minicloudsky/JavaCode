@@ -1,0 +1,171 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\MyNotePad7.iml
+* .idea\codeStyles\
+* .idea\codeStyles\Project.xml
+* .idea\modules.xml
+* .idea\workspace.xml
+* .metadata\
+* .metadata\.lock
+* .metadata\.log
+* .metadata\.plugins\
+* .metadata\.plugins\com.android.ide.eclipse.adt\
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\AnalogClock.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\AutoCompleteTextView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Button.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\CalendarView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\CheckBox.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\CheckedTextView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Date.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\DigitalClock.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Email.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ExpandableListView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\LargeText.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ListView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\MediumText.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\MultiAutoCompleteTextView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\MultilineText.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Number.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\NumberDecimal.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\NumberSigned.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Password.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\PasswordNumeric.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\PersonName.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Phone.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\PlainText.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\PostalAddress.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ProgressBarHorizontal.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ProgressBarLarge.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ProgressBarNormal.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ProgressBarSmall.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\QuickContactBadge.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\RadioButton.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\RadioGroup.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\RatingBar.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\SeekBar.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\SmallButton.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\SmallText.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Spinner.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\TabHost.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\TabWidget.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\TextView.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\Time.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ToggleButton.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ZoomButton.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\ZoomControls.png
+* .metadata\.plugins\com.android.ide.eclipse.adt\palette-preview-r16b-19-theme-37inwvganexusone\preview.properties
+* .metadata\.plugins\org.eclipse.cdt.core\
+* .metadata\.plugins\org.eclipse.cdt.core\.log
+* .metadata\.plugins\org.eclipse.cdt.make.core\
+* .metadata\.plugins\org.eclipse.cdt.make.core\specs.c
+* .metadata\.plugins\org.eclipse.cdt.make.core\specs.cpp
+* .metadata\.plugins\org.eclipse.core.resources\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\a0\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\a0\d6\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\a0\d6\properties.index
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\a0\de\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\a0\de\properties.index
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.indexes\properties.index
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.location
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\.markers
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\org.eclipse.jdt.core\
+* .metadata\.plugins\org.eclipse.core.resources\.projects\PinkDiary\org.eclipse.jdt.core\state.dat
+* .metadata\.plugins\org.eclipse.core.resources\.root\
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\history.version
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.index
+* .metadata\.plugins\org.eclipse.core.resources\.root\.indexes\properties.version
+* .metadata\.plugins\org.eclipse.core.resources\.root\1.tree
+* .metadata\.plugins\org.eclipse.core.resources\.safetable\
+* .metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resources
+* .metadata\.plugins\org.eclipse.core.runtime\
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\com.android.ide.eclipse.adt.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\com.android.ide.eclipse.ddms.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.cdt.debug.core.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.cdt.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.core.resources.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.debug.core.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.debug.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jdt.core.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jdt.launching.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.jdt.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.team.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.editors.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.ide.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.ui.prefs
+* .metadata\.plugins\org.eclipse.core.runtime\.settings\org.eclipse.wst.sse.ui.prefs
+* .metadata\.plugins\org.eclipse.debug.core\
+* .metadata\.plugins\org.eclipse.debug.core\.launches\
+* .metadata\.plugins\org.eclipse.debug.core\.launches\PinkDiary.launch
+* .metadata\.plugins\org.eclipse.debug.ui\
+* .metadata\.plugins\org.eclipse.debug.ui\launchConfigurationHistory.xml
+* .metadata\.plugins\org.eclipse.e4.workbench\
+* .metadata\.plugins\org.eclipse.e4.workbench\workbench.xmi
+* .metadata\.plugins\org.eclipse.jdt.core\
+* .metadata\.plugins\org.eclipse.jdt.core\1928619689.index
+* .metadata\.plugins\org.eclipse.jdt.core\3530951052.index
+* .metadata\.plugins\org.eclipse.jdt.core\externalLibsTimeStamps
+* .metadata\.plugins\org.eclipse.jdt.core\invalidArchivesCache
+* .metadata\.plugins\org.eclipse.jdt.core\javaLikeNames.txt
+* .metadata\.plugins\org.eclipse.jdt.core\nonChainingJarsCache
+* .metadata\.plugins\org.eclipse.jdt.core\savedIndexNames.txt
+* .metadata\.plugins\org.eclipse.jdt.core\variablesAndContainers.dat
+* .metadata\.plugins\org.eclipse.jdt.launching\
+* .metadata\.plugins\org.eclipse.jdt.launching\.install.xml
+* .metadata\.plugins\org.eclipse.jdt.launching\libraryInfos.xml
+* .metadata\.plugins\org.eclipse.jdt.ui\
+* .metadata\.plugins\org.eclipse.jdt.ui\OpenTypeHistory.xml
+* .metadata\.plugins\org.eclipse.jdt.ui\QualifiedTypeNameHistory.xml
+* .metadata\.plugins\org.eclipse.jdt.ui\dialog_settings.xml
+* .metadata\.plugins\org.eclipse.ui.ide\
+* .metadata\.plugins\org.eclipse.ui.ide\dialog_settings.xml
+* .metadata\.plugins\org.eclipse.ui.workbench\
+* .metadata\.plugins\org.eclipse.ui.workbench\dialog_settings.xml
+* .metadata\.plugins\org.eclipse.ui.workbench\workingsets.xml
+* .metadata\.plugins\org.eclipse.wst.internet.cache\
+* .metadata\.plugins\org.eclipse.wst.internet.cache\cache.xml
+* .metadata\.plugins\org.eclipse.wst.sse.ui\
+* .metadata\.plugins\org.eclipse.wst.sse.ui\dialog_settings.xml
+* .metadata\.plugins\org.eclipse.wst.xml.core\
+* .metadata\.plugins\org.eclipse.wst.xml.core\default_catalog.xml
+* .metadata\.plugins\org.eclipse.wst.xml.core\system_catalog.xml
+* .metadata\version.ini
+* proguard.cfg
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.law.mapper.AnswerMapper">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <resultMap type="com.law.pojo.Answer" id="answerResultMap">
+    	<id column="id" property="id" jdbcType="BIGINT"/>
+    	<result column="singlechoice_id" property="singlechoiceId" jdbcType="BIGINT"/>
+    	<result column="multiplechoice_id" property="multiplechoiceId" jdbcType="BIGINT"/>
+    	<result column="content" property="content" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="queryBySingleChoiceId" resultMap="answerResultMap" parameterType="_long">
+        <!-- 具体的sql -->
+        SELECT
+            *
+        FROM
+            answer
+        WHERE
+            singlechoice_id = #{singlechoiceId}
+    </select>
+
+	<select id="queryByMultipleChoiceId" resultMap="answerResultMap" parameterType="_long">
+        <!-- 具体的sql -->
+        SELECT
+            *
+        FROM
+          	answer
+        WHERE
+            multiplechoice_id = #{multiplechoiceId}
+    </select>
+	<insert id="insert"  parameterType="Answer">
+		INSERT ignore INTO answer(content,singlechoice_id,multiplechoice_id)
+		VALUES(#{content},#{singlechoiceId},#{multiplechoiceId})
+	</insert>
+
+    <update id="update" parameterType="Answer">
+        UPDATE answer
+        SET 
+         	content = #{content},
+        	singlechoice_id = #{singlechoiceId},
+        	multiplechoice_id = #{multiplechoiceId}
+        WHERE
+            id = #{id}
+        AND number > 0
+    </update>
+    
+    <delete id="delete" parameterType="_long">
+       DELETE 
+       FROM answer
+       WHERE id = #{id}
+    </delete>
+</mapper>
