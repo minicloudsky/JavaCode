@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">时光记忆</string>
-    <string name="title_activity_already_send_email">AlreadySendEmailActivity</string>
-    <string name="scale_up_show_behavior">com.sgjiyi.view.ScaleUpShowBehavior</string>
-    <string name="search_label">搜索</string>
-    <string name="search_hint">搜索</string>
-    <string name="settings_description">搜索</string>
-</resources>
